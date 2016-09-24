@@ -19,6 +19,8 @@ class ReposController < ApplicationController
         resp = JSON.parse resp.body
         text = "O repo #{repo} possui #{resp['stargazers_count']} Estrela(s)"
         render json: { text: text }
+      else
+        render json: { text: 'Foi mal vei, não sei te responder ainda nossos 🖥 ainda estão aprendendo isso. 😉' }
     end
   end
 
