@@ -5,7 +5,7 @@ class ReposController < ApplicationController
 
   def create
 
-    action, repo = params[:text].split(' ').map { |c| puts("C: #{c}"); c.strip.downcase }
+    botname, action, repo = params[:text].split(' ').map { |c| puts("C: #{c}"); c.strip.downcase }
     repo_url = "https://api.github.com/repos/#{repo}"
 
     case action
